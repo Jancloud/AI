@@ -124,7 +124,7 @@ function GeneratorDemo() {
         </div>
 
         <div className="text-center mt-12">
-          <Link href="/signup">
+          <Link href="/pricing">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
               立即尝试
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -232,7 +232,7 @@ export default function AIStoryGeneratorPage() {
           highlightedText="精彩故事"
           description="输入主题，AI立即为您创作完整的故事。从灵感到成稿，只需几秒钟。"
           primaryButtonText="免费试用"
-          primaryButtonHref="/signup"
+          primaryButtonHref="/pricing"
           secondaryButtonText="了解更多"
           secondaryButtonHref="#how-it-works"
         />
@@ -253,7 +253,7 @@ export default function AIStoryGeneratorPage() {
           title="准备好生成您的故事了吗？"
           description="立即体验AI故事生成器，释放您的创意潜能。"
           buttonText="免费开始"
-          buttonHref="/signup"
+          buttonHref="/pricing"
         />
       </main>
       <Footer />

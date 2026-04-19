@@ -162,7 +162,7 @@ function ExamplePrompts() {
         </div>
 
         <div className="text-center mt-12">
-          <Link href="/signup">
+          <Link href="/pricing">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
               <Shuffle className="w-5 h-5 mr-2" />
               获取更多提示
@@ -235,7 +235,7 @@ export default function WritingPromptGeneratorPage() {
           highlightedText="写作提示生成器"
           description="缺乏灵感？让AI为您生成无限创意写作提示，激发您的创作潜能。"
           primaryButtonText="获取灵感"
-          primaryButtonHref="/signup"
+          primaryButtonHref="/pricing"
           secondaryButtonText="查看示例"
           secondaryButtonHref="#examples"
         />
@@ -256,7 +256,7 @@ export default function WritingPromptGeneratorPage() {
           title="准备好获取灵感了吗？"
           description="让AI帮您突破创作瓶颈，开始您的写作之旅。"
           buttonText="免费开始"
-          buttonHref="/signup"
+          buttonHref="/pricing"
         />
       </main>
       <Footer />

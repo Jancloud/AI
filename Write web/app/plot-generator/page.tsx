@@ -151,7 +151,7 @@ function PlotElements() {
                 </li>
               ))}
             </ul>
-            <Link href="/signup">
+            <Link href="/pricing">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                 免费生成情节
               </Button>
@@ -185,7 +185,7 @@ export default function PlotGeneratorPage() {
           highlightedText="情节生成器"
           description="不知道故事该怎么发展？让AI帮您设计引人入胜的情节，包括冲突、转折和结局。"
           primaryButtonText="免费试用"
-          primaryButtonHref="/signup"
+          primaryButtonHref="/pricing"
           secondaryButtonText="查看功能"
           secondaryButtonHref="#features"
         />
@@ -205,7 +205,7 @@ export default function PlotGeneratorPage() {
           title="准备好设计您的情节了吗？"
           description="让AI帮您构建引人入胜的故事骨架。"
           buttonText="免费开始"
-          buttonHref="/signup"
+          buttonHref="/pricing"
         />
       </main>
       <Footer />

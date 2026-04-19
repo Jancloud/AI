@@ -55,7 +55,7 @@ const features = [
 const faqItems = [
   {
     question: "AI能帮我写出好小说吗？",
-    answer: "AI是您的创作伙伴，它可以帮助您克服创作瓶颈、生成灵感、扩展情节。但优秀的小说需要您的创意vision和艺术判断。AI提供工具，您是真正的创作者。"
+    answer: "AI是您的创作伙伴，它可以帮助您克服创作瓶颈、生成灵感、扩展情节。但优秀的小说需要您的创意视野和艺术判断。AI提供工具，您是真正的创作者。"
   },
   {
     question: "AI如何理解我的故事？",
@@ -163,7 +163,7 @@ function AICapabilities() {
               ))}
             </ul>
             <div className="mt-8">
-              <Link href="/signup">
+              <Link href="/pricing">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                   开始创作小说
                 </Button>
@@ -187,7 +187,7 @@ export default function AINovelWriterPage() {
           highlightedText="小说创意"
           description="AI帮您构建世界观、塑造角色、推进情节。让您的小说创作之旅更加顺畅精彩。"
           primaryButtonText="免费试用"
-          primaryButtonHref="/signup"
+          primaryButtonHref="/pricing"
           secondaryButtonText="查看功能"
           secondaryButtonHref="#features"
         />
@@ -207,7 +207,7 @@ export default function AINovelWriterPage() {
           title="准备好创作您的小说了吗？"
           description="让AI成为您的创作伙伴，开始您的小说写作之旅。"
           buttonText="免费开始"
-          buttonHref="/signup"
+          buttonHref="/pricing"
         />
       </main>
       <Footer />

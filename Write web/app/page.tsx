@@ -334,7 +334,7 @@ export default function HomePage() {
           primaryButtonText="免费开始"
           primaryButtonHref="/signup"
           secondaryButtonText="观看演示"
-          secondaryButtonHref="#demo"
+          secondaryButtonHref="/ai-book-writer"
           showVideo={true}
           imageSrc="/demo.png"
         />
@@ -356,6 +356,30 @@ export default function HomePage() {
           buttonText="立即免费试用"
           buttonHref="/signup"
         />
+        
+        {/* Quick Start Section */}
+        <section className="py-16 bg-muted/30">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              无需信用卡，立即可用
+            </h3>
+            <p className="text-muted-foreground mb-8">
+              注册即可获得免费版永久使用权，包含基础编辑器和云端存储
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/signup">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8">
+                  免费注册账户
+                </Button>
+              </Link>
+              <Link href="/pricing">
+                <Button size="lg" variant="outline" className="px-8">
+                  查看套餐价格
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>

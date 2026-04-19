@@ -35,18 +35,20 @@ export function FAQSection({
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="w-full space-y-4">
+        <Accordion type="single" collapsible className="w-full space-y-3">
           {items.map((item, index) => (
             <AccordionItem 
               key={index} 
               value={`item-${index}`}
-              className="border border-border rounded-lg px-6 data-[state=open]:bg-accent/50"
+              className="border border-border rounded-xl px-6 data-[state=open]:bg-accent/30 data-[state=open]:border-primary/20 transition-all duration-200"
             >
-              <AccordionTrigger className="text-left font-medium hover:no-underline py-5">
-                {item.question}
+              <AccordionTrigger className="text-left font-medium hover:no-underline py-5 text-base w-full justify-between">
+                <span>{item.question}</span>
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-5">
-                {item.answer}
+              <AccordionContent className="text-muted-foreground pb-5 leading-relaxed text-sm">
+                <div className="whitespace-pre-line">
+                  {item.answer}
+                </div>
               </AccordionContent>
             </AccordionItem>
           ))}

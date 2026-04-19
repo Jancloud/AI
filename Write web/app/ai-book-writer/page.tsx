@@ -55,7 +55,7 @@ const features = [
 const faqItems = [
   {
     question: "AI写的内容属于谁？",
-    answer: "所有使用Squibler创作的内容都完全属于您。我们不会对您的作品主张任何权利，您可以自由出版、销售或以任何方式使用。"
+    answer: "使用Squibler创作的内容都完全属于您。我们不会对您的作品主张任何权利，您可以自由出版、销售或以任何方式使用。"
   },
   {
     question: "AI能完全代替我写书吗？",
@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: "AI生成的内容质量如何？",
-    answer: "我们使用最先进的语言模型，生成的内容连贯、语法正确、风格自然。但我们建议您始终审阅和编辑AI输出，加入您独特的声音和见解。"
+    answer: "我们使用最先进的语言模型，生成的内容连贯、语法正确、风格自然。但我们建议您始终审阅和编辑AI输出的内容，加入您独特的声音和见解。"
   },
   {
     question: "AI如何学习我的写作风格？",
@@ -75,7 +75,7 @@ const faqItems = [
   },
   {
     question: "AI支持哪些类型的书籍？",
-    answer: "AI支持几乎所有类型的书籍创作，包括非虚构（商业、自助、传记、教程）和虚构（小说、短篇）。不同类型有专门优化的提示和输出风格。"
+    answer: "AI支持几乎所有类型的书籍创作，包括非虚构类（商业、自助、传记、教程）和虚构类（小说、短篇故事）。不同类型都有专门优化的提示词和输出风格。"
   }
 ]
 
@@ -112,7 +112,7 @@ function AIShowcase() {
                 </li>
               ))}
             </ul>
-            <Link href="/signup">
+            <Link href="/pricing">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                 免费体验AI写作
               </Button>
@@ -202,9 +202,9 @@ export default function AIBookWriterPage() {
           highlightedText="书籍创作"
           description="让人工智能成为您的写作伙伴。从灵感到成稿，AI帮助您更快、更高效地完成书籍创作。"
           primaryButtonText="免费试用"
-          primaryButtonHref="/signup"
+          primaryButtonHref="/pricing"
           secondaryButtonText="了解更多"
-          secondaryButtonHref="#how-it-works"
+          secondaryButtonHref="#features"
         />
         
         <FeaturesGrid
@@ -222,7 +222,7 @@ export default function AIBookWriterPage() {
           title="准备好用AI写书了吗？"
           description="立即开始您的AI辅助写作之旅，让创作变得前所未有的轻松。"
           buttonText="免费开始"
-          buttonHref="/signup"
+          buttonHref="/pricing"
         />
       </main>
       <Footer />

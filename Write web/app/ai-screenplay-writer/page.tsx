@@ -71,7 +71,7 @@ const faqItems = [
   },
   {
     question: "可以让AI生成整个剧本吗？",
-    answer: "技术上可以，但不建议。好的剧本需要您的创意vision和编剧技巧。AI最适合用于克服瓶颈、探索可能性和加速初稿。"
+    answer: "技术上可以，但不建议。好的剧本需要您的创意视野和编剧技巧。AI最适合用于克服瓶颈、探索可能性和加速初稿。"
   },
   {
     question: "AI内容可以商业使用吗？",
@@ -110,7 +110,7 @@ function ScreenplayShowcase() {
                 </li>
               ))}
             </ul>
-            <Link href="/signup">
+            <Link href="/pricing">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                 免费体验
               </Button>
@@ -185,7 +185,7 @@ export default function AIScreenplayWriterPage() {
           highlightedText="银幕故事"
           description="专业的AI剧本创作助手。从场景构思到对话创作，让您的剧本创作更加高效专业。"
           primaryButtonText="免费试用"
-          primaryButtonHref="/signup"
+          primaryButtonHref="/pricing"
           secondaryButtonText="查看功能"
           secondaryButtonHref="#features"
         />
@@ -205,7 +205,7 @@ export default function AIScreenplayWriterPage() {
           title="准备好创作您的剧本了吗？"
           description="让AI成为您的编剧搭档，开始您的银幕创作之旅。"
           buttonText="免费开始"
-          buttonHref="/signup"
+          buttonHref="/pricing"
         />
       </main>
       <Footer />
