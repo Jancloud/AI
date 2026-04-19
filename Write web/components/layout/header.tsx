@@ -66,11 +66,14 @@ function NavDropdown({
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
+      // 检查点击是否在dropdown外部
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        // 点击外部时关闭菜单
         onHover(false)
       }
     }
 
+    // 监听点击事件
     document.addEventListener('mousedown', handleClickOutside)
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [onHover])
@@ -85,7 +88,7 @@ function NavDropdown({
   const handleMouseLeave = () => {
     hoverTimeoutRef.current = setTimeout(() => {
       onHover(false)
-    }, 150)
+    }, 200)
   }
 
   const handleClick = (e: React.MouseEvent) => {
@@ -154,20 +157,31 @@ function NavDropdown({
 }
 
 export function Header() {
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const [dropdownStates, setDropdownStates] = useState<Record<string, { clicked: boolean; hovered: boolean }>>({
+    squiblerAI: { clicked: false, hovered: false },
+    writingSoftware: { clicked: false, hovered: false },
+    tools: { clicked: false, hovered: false },
+    resources: { clicked: false, hovered: false },
+  })
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [hoveredDropdown, setHoveredDropdown] = useState<string | null>(null)
+
+  const isDropdownOpen = (key: string) => {
+    const state = dropdownStates[key]
+    return state ? (state.clicked || state.hovered) : false
+  }
 
   const handleToggle = (key: string) => {
-    setOpenDropdown(openDropdown === key ? null : key)
+    setDropdownStates(prev => ({
+      ...prev,
+      [key]: { clicked: !prev[key].clicked, hovered: false }
+    }))
   }
 
   const handleHover = (key: string, isOpen: boolean) => {
-    setHoveredDropdown(isOpen ? key : null)
-  }
-
-  const isDropdownOpen = (key: string) => {
-    return openDropdown === key || hoveredDropdown === key
+    setDropdownStates(prev => ({
+      ...prev,
+      [key]: { ...prev[key], hovered: isOpen }
+    }))
   }
 
   return (
@@ -216,12 +230,6 @@ export function Header() {
               onToggle={() => handleToggle('resources')}
               onHover={(isOpen) => handleHover('resources', isOpen)}
             />
-            <Link
-              href="/pricing"
-              className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors rounded-lg hover:bg-accent/50"
-            >
-              定价
-            </Link>
           </nav>
 
           {/* Desktop CTA */}
@@ -258,7 +266,7 @@ export function Header() {
                 title={section.title}
                 icon={section.icon}
                 items={section.items}
-                isOpen={openDropdown === key}
+                isOpen={isDropdownOpen(key)}
                 onToggle={() => handleToggle(key)}
                 onClose={() => setMobileMenuOpen(false)}
               />
